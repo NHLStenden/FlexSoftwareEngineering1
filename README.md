@@ -8,3 +8,4 @@ Er worden geen complete Visual Studio Solutions geplaatst, maar voornamelijk
 bronbestanden (bijv .cs), zodat eventuele aanvullende modules door de student
 zelf toegevoegd kunnen worden.
 
+Dit is een nieuw stukje tekst
