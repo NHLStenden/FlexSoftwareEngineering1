@@ -7,5 +7,3 @@ flex opleiding Software Engineering, module Software Engineering 1.
 Er worden geen complete Visual Studio Solutions geplaatst, maar voornamelijk
 bronbestanden (bijv .cs), zodat eventuele aanvullende modules door de student
 zelf toegevoegd kunnen worden.
-
-Dit is een nieuw stukje tekst
