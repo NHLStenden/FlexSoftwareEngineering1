@@ -1,6 +1,7 @@
 # Huiswerk 01
 Dit huiswerk gaat over het uitwerken van een drietal opdrachten met recursie
 
+Om dit bestand te lezen in Visual Studio, kun je de Markdown plugin downloaden: [Markdown Editor](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.MarkdownEditor). 
 
 We gaan uit van de volgende code voor de Main-functie:
 
@@ -56,7 +57,7 @@ de wortel.
 
 
 ## Referenties
-  * [https://docs.microsoft.com/en-us/dotnet/api/system.math.floor?f1url=https%3A%2F%2Fmsdn.microsoft.com%2Fquery%2Fdev15.query%3FappId%3DDev15IDEF1%26l%3DEN-US%26k%3Dk(System.Math.Floor);k(TargetFrameworkMoniker-.NETFramework,Version%3Dv4.6.1);k(DevLang-csharp)%26rd%3Dtrue&view=netframework-4.8](Floor functie)
+  * [Floor functie](https://docs.microsoft.com/en-us/dotnet/api/system.math.floor?f1url=https%3A%2F%2Fmsdn.microsoft.com%2Fquery%2Fdev15.query%3FappId%3DDev15IDEF1%26l%3DEN-US%26k%3Dk(System.Math.Floor);k(TargetFrameworkMoniker-.NETFramework,Version%3Dv4.6.1);k(DevLang-csharp)%26rd%3Dtrue&view=netframework-4.8)
   
 
 
