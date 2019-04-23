@@ -45,7 +45,7 @@ namespace Week02Recursie
 
             Console.WriteLine("Totaal = € {0}", OptellenLijst(lijstMetGetallen));
 
-            String woord = "Hallo";
+            String woord = "Hallo dit is een wat langere tekst";
 
             Console.WriteLine("{0} omgedraaid = {1}", woord, omdraaien(woord));
 

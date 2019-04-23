@@ -1,0 +1,25 @@
+Ontvangen: 1
+Items in de lijst : 1
+Ontvangen: 2
+Items in de lijst : 2
+Ontvangen: 3
+Items in de lijst : 3
+Ontvangen: 4
+Items in de lijst : 4
+Ontvangen: 5
+Items in de lijst : 5
+Ontvangen: 6
+Items in de lijst : 6
+Ontvangen: 7
+Items in de lijst : 7
+Ontvangen: 8
+Items in de lijst : 8
+1
+2
+3
+4
+5
+6
+7
+8
+Totaal = ? 36
