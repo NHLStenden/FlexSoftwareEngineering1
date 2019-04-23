@@ -74,7 +74,7 @@ namespace Huiswerk01
         /// <returns>True als een woord een palindroom is</returns>
         static bool TestPalindroom(String woord)
         {
-            return false;
+            return String.Reverse(woord) == woord ;
         }//TestPalindroom
 
         /// <summary>
