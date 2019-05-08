@@ -13,6 +13,9 @@ namespace Huiswerk01
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("aba".Substring(1,0));
+
+
             /******************************************************************************************************************/
             // Zoek alle getallen waarvan de wortel een geheel getal is.
             /******************************************************************************************************************/
@@ -59,7 +62,7 @@ namespace Huiswerk01
             Console.WriteLine("Zoeken naar palindromen");
 
             // definieer een Array waar de lijst met woorden in staat die we willen testen.
-            String[] testWoorden = { "lepels", "lepel", "piet", "redder" };
+            String[] testWoorden = { "lepels", "lepel", "piet", "redder", "relder" };
 
             // doorloop alle elementen in de array en test of het een Palindroom is.
             n = testWoorden.Length;
@@ -164,17 +167,50 @@ namespace Huiswerk01
         /// <returns>True als een woord een palindroom is</returns>
         static bool TestPalindroom(String woord)
         {
-            if (woord.Length <= 1) return true;
+            // bepaal de lengte van het woord.
             int len = woord.Length;
-            char left = woord[0];
+
+            // als het woord dat overgebleven is NUL of ÉÉN karakter bevat dan is het een palindroom (dit is een kwestie van definitie overigens)
+            if (len <= 1) return true;
+
+            // bepaal de eerste en laatste letter
+            char left  = woord[0];
             char right = woord[len - 1];
 
+            // als de eerste en de laatste letter gelijk zijn, zou het om een palindroom kunnen gaan.
             if (left == right)
             {
+                // test of het inderdaad om een palindroom gaat door het restant opnieuw aan te bieden aan de functie.
+
+                /**
+                 * het restant wordt bepaald door de tweede tot en met de een-na-laatste letter op te halen
+                 * en in een nieuwe string op te slaan.
+                 * 
+                 * zie URL https://docs.microsoft.com/en-us/dotnet/api/system.string.substring?view=netframework-4.8
+                 * 
+                 * LET OP: dit gaat goed doordat de functie SUBSTRING in ons geval altijd een woord krijgt 
+                 * aangeboden van minimaal 2 karakters die ook allebei gelijk zijn (left == right). 
+                 * 
+                 * omdat 
+                 *   len -2==0 
+                 * levert de functie aanroep 
+                 *      SUBSTRING ("AA", len -2)  ==> SUBSTRING ("AA", 0)
+                 * een lege string op. De Stopconditie checkt of een lege string wordt teruggegeven en
+                 * geeft dan TRUE als resultaat.
+                 * 
+                 * LET OP: deze aanroep vindt voor woord van twee karakters alleen plaats als ze gelijk zijn.
+                 */
+
                 String rest = woord.Substring(1, len - 2);
+
+                // voer de functie opnieuw uit met het restant van het woord.
                 return TestPalindroom(rest);
             }
-            else return false;
+            else
+            {
+                // letters zijn verschillend dus geen palindroom; return FALSE
+                return false;
+            }
         }//TestPalindroom
 
         /// <summary>
@@ -188,15 +224,35 @@ namespace Huiswerk01
         /// <param name="sqrts">Lijst met resultaten</param>
         static void FindAllIntegerSQRT(int n, List<int> sqrts)
         {
+            /* 
+             * stopconditie: als n is NUL , dan resultaat toevoegen en stoppen. (immers de wortel van 0 = 0)
+             */
             if (n == 0)
             {
                 sqrts.Add(n);
                 return;
             }
+            // bereken de wortel
             double sqrt = Math.Sqrt(n);
 
-            if ((int)sqrt == sqrt) sqrts.Add(n);
+            // kijk of de wortel een geheel getal is. zo ja, voeg toe aan de lijst
 
+            // Methode A: typecast het resultaat naar een integer en vergelijk met de uitgerekende wortel. 
+            //            als deze gelijk zijn is het een geheel getal
+            bool isInteger1 = ((int)sqrt == sqrt);
+
+            // Methode B: rond de uitegerekende wortel af, en trek de uitgerekende wortel daar van af. 
+            //            als het verschil dat overblijft kleiner is een klein getal (epsilon = 0.000001) 
+            //            dan gaat het zeer waarschijnlijk om een geheel getal.
+            bool isInteger2 = Math.Abs (Math.Round(sqrt) - sqrt) < 0.000001;
+
+            // Methode C: bereken de rest de deling 
+            ///                wortel : 1 (wortel gedeeld door 1)
+            ///           als het restant exact NUL is, is het een geheel getal.     
+            bool isInteger3 = (sqrt % 1 == 0);
+            if (isInteger1 && isInteger2 && isInteger3) sqrts.Add(n);
+
+            // test de resterende getallen (1..n-1)
             FindAllIntegerSQRT(n - 1, sqrts);
         }//FindAllIntegerSQRT
     }
