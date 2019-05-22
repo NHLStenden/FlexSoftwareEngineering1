@@ -13,6 +13,12 @@ namespace VendingMachine
         /// <summary>De hoeveel ingeworpen geld in EURO cent</summary>
         private int Ingeworpengeld;
 
+        public string serialnumber;
+
+        //public string SerialNumber() { return serialnumber;  }
+        //public void   SerialNumber(string value) { serialnumber = value;  }
+
+
         /// <summary>
         /// Deze constructor maakt een vendingmachine van een bepaalde kleur 
         /// met een opgegeven stekker voor de stroomaansluiting
@@ -66,7 +72,7 @@ namespace VendingMachine
 
         public string SaldoWeergave()
         {
-            return "";
+            return String.Format("{0:C2}", Ingeworpengeld / 100.0);
         }// SaldoWeergave()
 
         public int Saldo()
