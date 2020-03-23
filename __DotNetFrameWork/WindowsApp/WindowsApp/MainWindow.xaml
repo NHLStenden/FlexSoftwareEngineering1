@@ -1,0 +1,32 @@
+﻿<Window x:Class="WindowsApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WindowsApp"
+        mc:Ignorable="d"
+        Title="Mijn Eerste Windows Applicatie" Height="313" Width="714" WindowStartupLocation="CenterScreen" WindowStyle="ThreeDBorderWindow">
+    <Grid>
+        <DockPanel  Height="25" LastChildFill="True" VerticalAlignment="Top">
+            <Menu >
+                <MenuItem Header="Gebruiker">
+                    <MenuItem Header="Inloggen" Click="MenuItem_Login"/>
+                    <MenuItem Header="Uitloggen" Click="MenuItem_Logout"/>
+                    <Separator/>
+                    <MenuItem Header="Afsluiten" Click="MenuItem_Quit"></MenuItem>
+                </MenuItem>
+                <MenuItem Header="Bewerken">
+                    <MenuItem Command="Copy"/>
+                    <MenuItem Command="Paste"/>
+                </MenuItem>
+                <MenuItem Header="To Do">
+                    <MenuItem Header="Nieuw" />
+                    <MenuItem Header="Verwijder" IsEnabled="false"/>
+                    <Separator/>
+                    <MenuItem Header="Lijst Exporteren"/>
+                </MenuItem>
+            </Menu>
+        </DockPanel>
+        <Label x:Name="lbl_Name" Content="" HorizontalAlignment="Left" Height="43" Margin="50,30,0,0" VerticalAlignment="Top" Width="625" FontFamily="Arial" FontSize="14" FontWeight="Bold"/>
+    </Grid>
+</Window>

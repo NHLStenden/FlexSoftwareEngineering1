@@ -15,6 +15,7 @@ namespace Vliegtuigen
 
         public override void Opstijgen()
         {
+            Console.WriteLine("###### Zweefvliegtuig ######");
             Console.WriteLine();
             base.Opstijgen();
             Console.WriteLine();

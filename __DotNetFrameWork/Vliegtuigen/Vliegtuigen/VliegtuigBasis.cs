@@ -19,6 +19,8 @@ namespace Vliegtuigen
 
         public virtual void Opstijgen()
         {
+
+            Console.WriteLine("***** {0} ****", this.GetType().Name);
             if (aantalMotoren > 0)
             {
                 Console.WriteLine();
@@ -29,9 +31,8 @@ namespace Vliegtuigen
             }
             else
             {
-                Console.WriteLine("Hoe dan?");
+                Console.WriteLine("Hoe dan? te weinig motoren");
 
-                Console.WriteLine
             }
                 
         }//opstijgen()

@@ -11,9 +11,17 @@ namespace Vliegtuigen
     /// </summary>
     class Drone : VliegtuigBasis
     {
+        static int instantieTeller =0;
+        
         public Drone() : base(1, "straal")
         {
+            instantieTeller++;
 
         }//constructor
+
+        static public void IkDoeIets()
+        {
+            Console.WriteLine("Een statische methode {0}" , instantieTeller);
+        }
     }
 }
