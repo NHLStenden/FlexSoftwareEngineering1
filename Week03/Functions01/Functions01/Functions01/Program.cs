@@ -1,5 +1,6 @@
 ﻿using NUnit.Framework;
 using System;
+using System.Collections.Generic;
 
 /// <summary>
 /// This program is dependant of the following Nuget packages:
@@ -22,13 +23,56 @@ namespace Functions01
         
         static void Main(string[] args)
         {
+
+            int getal = 10;
+
+            VeranderParameter(getal);
+            Console.WriteLine("Nieuwe waarde getal = {0}", getal);
+
+            EchteVeranderParameter(ref getal );
+            Console.WriteLine("Nieuwe waarde getal = {0}", getal);
+
+            List<int> lijstje = new List<int>();
+            int aantal = VoegToe(lijstje);
+
+            foreach (var item in lijstje)
+            {
+                Console.WriteLine("Lijstje : {0}", item);
+            }
+
+            int deelresultaat;
+
+            try
+            {
+                deelresultaat = Divide(10, 0);
+            }
+            catch (DivideByZeroException)
+            {
+                Console.WriteLine("Je mag niet delen door 0");
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Er gaat iets anders mis");
+            }
+            finally
+            {
+                Console.WriteLine("We gaan fijn weer verder");
+            }
+
+            
+
+
             Console.WriteLine("1 + 3 = {0}" , Add(1,3));
             Console.WriteLine("1 - 3 = {0}", Subtract(1,3));
             Console.WriteLine("1 x 3 = {0}", Multiply(1,3));
+            Console.WriteLine("1 x 2 x 3 = {0}", Multiply(1, 2, 3));
+
             Console.WriteLine("3^2 = {0}", Square(3));
             Console.WriteLine("3^2 = {0}", Power(3,2));
             Console.WriteLine("3^2 = {0}", PowerRecursive(3,2));
             Console.WriteLine("3^4 = {0}", PowerRecursive(3,4));
+
+            dommefunctie();
         }
 
         [Test]
@@ -54,14 +98,45 @@ namespace Functions01
         [Test]
         static public void TestDivide()
         {
-            DivideByZeroException ex = Assert.Throws<DivideByZeroException>(() => { Divide(10, 0);  });
+            // SEE: https://github.com/nunit/docs/wiki/Assert.Throws
+            DivideByZeroException ex = Assert.Throws<DivideByZeroException>(() => { Divide(10, 0);  }); // Lambda Expression 
+
             Assert.AreEqual("Cannot divide 10 by 0", ex.Message);
 
             Assert.AreEqual(2, Divide(10, 5));
             Assert.AreEqual(3, Divide(10, 3)); // Good test: integer division!
         }
 
+        static void dommefunctie()
+        {
+            Console.WriteLine("Domme functie");
+        }
 
+        static void VeranderParameter(int a)
+        {
+            a = a + 1;
+
+        }
+
+        /// <summary>
+        /// Deze functie verandert wel de meegegeven parameter 'a'
+        /// </summary>
+        /// <param name="a">Deze parameter wordt 'by reference' meegegeven.</param>
+        static void EchteVeranderParameter(ref int a)
+        {
+            a = a + 1;
+        }
+
+        static int VoegToe(List<int> locaalLijstje)
+        {
+            locaalLijstje.Add(10);
+            locaalLijstje.Add(11);
+            locaalLijstje.Add(12);
+            locaalLijstje.Add(13);
+            locaalLijstje.Add(14);
+
+            return locaalLijstje.Count;
+        }
 
         /// <summary>
         /// Return the multiplication of a and b
@@ -69,10 +144,15 @@ namespace Functions01
         /// <param name="a"></param>
         /// <param name="b"></param>
         /// <returns></returns>
-        
+
         static int Multiply(int a, int b)
         {
             return a * b;
+        }// Multiply
+
+        static int Multiply(int a, int b, int c)
+        {
+            return a * b * c;
         }// Multiply
 
         /// <summary>
@@ -81,7 +161,7 @@ namespace Functions01
         /// <param name="baseNr"></param>
         /// <param name="divider"></param>
         /// <returns></returns>
-        static int Divide(int baseNr, int divider)
+        static int Divide(int baseNr, int divider) 
         {
             if (divider == 0) throw new DivideByZeroException("Cannot divide " + baseNr + " by 0");
             return baseNr / divider;

@@ -42,6 +42,22 @@ namespace Recurions01
             martin = new Persoon("Martin", vader, moeder);
 
             PrintStamboom_Smart(martin, 0);
+            Console.WriteLine("----------------------------------------------------------------------------------------------------------------");
+
+            PrintStamboomVader(martin);
+            Console.WriteLine("----------------------------------------------------------------------------------------------------------------");
+            PrintStamboomMoeder(martin);
+            Console.WriteLine("----------------------------------------------------------------------------------------------------------------");
+
+            PrintStamboomMoeder_leveled(martin, 0);
+            Console.WriteLine("----------------------------------------------------------------------------------------------------------------");
+            PrintStamboomVader_leveled(martin, 0);
+            Console.WriteLine("----------------------------------------------------------------------------------------------------------------");
+
+            PrintStamboomMoeder_Reverse_leveled(martin, 0);
+            Console.WriteLine("----------------------------------------------------------------------------------------------------------------");
+            PrintStamboomVader_Reverse_leveled(martin, 0);
+            Console.WriteLine("----------------------------------------------------------------------------------------------------------------");
         }
 
         static void PrintStamboomVader(Persoon eenPersoon)
@@ -89,7 +105,7 @@ namespace Recurions01
             Console.WriteLine("{0} - {1}", new String(' ',level*2), eenPersoon.naam);
 
             // behandel resterende
-            PrintStamboomVader_leveled(eenPersoon.moeder, level+1);
+            PrintStamboomVader_leveled(eenPersoon.vader, level+1);
         }
         static void PrintStamboomMoeder_Reverse_leveled(Persoon eenPersoon, int level)
         {
@@ -110,7 +126,7 @@ namespace Recurions01
             if (eenPersoon == null) return;
 
             // behandel resterende
-            PrintStamboomVader_Reverse_leveled(eenPersoon.moeder, level+1);
+            PrintStamboomVader_Reverse_leveled(eenPersoon.vader, level+1);
 
             // behandel huidige situatie
             Console.WriteLine("{0} - {1}", new String(' ', level * 10), eenPersoon.naam);

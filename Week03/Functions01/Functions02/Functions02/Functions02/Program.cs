@@ -12,6 +12,16 @@ namespace Functions02
             Console.WriteLine(AddStrings("Hello", " ", "World!"));
             Console.WriteLine(AddStrings(new string[] { "Hello", "Everybody", "Tonight" }));
 
+            string[] lijstje = new string[] { "Hello", "Everybody", "Tonight" };
+
+            Console.WriteLine(VeranderStrings(lijstje));
+
+            foreach (var item in lijstje)
+            {
+                Console.WriteLine("Item uit lijstje: {0}", item);
+            }
+
+
             someGlobalVariable = 10;
             int result = UglyFunction();
 
@@ -20,7 +30,7 @@ namespace Functions02
 
             Console.WriteLine(SomeGenericFunction<int>(1234,5678));
             Console.WriteLine(SomeGenericFunction<double>(3.0, 4.567));
-            Console.WriteLine(SomeGenericFunction(3.9, 4.567)); // infer float
+            Console.WriteLine(SomeGenericFunction(3.9f, 4.567f)); // infer float
         }
 
         static string AddStrings(string s1, string s2)
@@ -37,7 +47,7 @@ namespace Functions02
         {
             string result = "";
 
-            // TODO: make better for-loop to prevent last space 
+            // TODO make better for-loop to prevent last space 
             // (SEE https://docs.microsoft.com/en-us/visualstudio/ide/using-the-task-list?view=vs-2019)
             // to view the TODO-list, select in Visual Studio from the menu --> View -->Task list 
             foreach (var s in strings)
@@ -46,6 +56,22 @@ namespace Functions02
             }
 
             return result.Trim(); // trim result to remove last space (ugly)
+        }
+        
+        /// <summary>
+        /// Deze functie voegt aan elke meegegeven string uit de array een uitroepteken toe.
+        /// Let op: Een array wordt meegegeven als 'Pass by reference'.
+        /// </summary>
+        /// <param name="strings">Een lijst met strings</param>
+        /// <returns></returns>
+        static int VeranderStrings(string[] strings)
+        {
+            for (int i = 0; i < strings.Length; i++)
+            {
+                strings[i] += "!";
+            }
+
+            return strings.Length; 
         }
 
         /// <summary>
