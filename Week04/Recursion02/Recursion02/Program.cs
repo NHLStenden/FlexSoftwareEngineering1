@@ -8,8 +8,10 @@ namespace Recursion02
         static void Main(string[] args)
         {
             Console.WriteLine(Optellen(10));
+            Console.WriteLine(OptellenShort(10));
             Console.WriteLine(Vermenigvuldigen(10));
             Console.WriteLine(ReverseString("Martin"));
+            Console.WriteLine(ReverseStringOptimised("Martin"));
             
         }
 
@@ -25,6 +27,14 @@ namespace Recursion02
             Assert.AreEqual(3, Optellen(2));
             Assert.AreEqual(6, Optellen(3));
             Assert.AreEqual(55, Optellen(10));
+            
+            Assert.AreEqual(0, OptellenShort(0));
+            Assert.AreEqual(0, OptellenShort(-1)); // let op: gebruik dus in je recursie <= 0 anders stopt de procedure niet bij negatieve getallen
+            Assert.AreEqual(1, OptellenShort(1));
+            Assert.AreEqual(3, OptellenShort(2));
+            Assert.AreEqual(6, OptellenShort(3));
+            Assert.AreEqual(55, OptellenShort(10));
+            
         }
 
         /// <summary>
@@ -64,6 +74,7 @@ namespace Recursion02
         public static void TestStringReverse(string input, string output)
         {
             Assert.AreEqual(output, ReverseString(input));
+            Assert.AreEqual(output, ReverseStringOptimised(input));
         }
 
         /// <summary>
@@ -88,7 +99,6 @@ namespace Recursion02
             // tijdelijk resultaat teruggeven ==> de laatste keer is dit het juiste resultaat
             return result;
         }
-
         /// <summary>
         /// Vermenigvuldig de getallen van 1 t/m getal (beter bekend als de Faculteit berekening)
         /// </summary>
@@ -108,7 +118,7 @@ namespace Recursion02
 
             // tijdelijk resultaat teruggeven ==> de laatste keer is dit het juiste resultaat
             return result;
-        }
+        }//Vermenigvuldigen
 
         /// <summary>
         /// Reverses a given string
@@ -131,6 +141,22 @@ namespace Recursion02
             result = String.Concat(result, c);
 
             return result;
-        }
+        }//ReverseString
+
+        //----------------------------------------------------------------------------------------------
+        //------------------------------------ VERKORTE VERSIES ----------------------------------------
+        //----------------------------------------------------------------------------------------------
+        static string ReverseStringOptimised(string text)
+        {
+            if (text.Length <= 1) return text;  // de omkering van een string van 1 letter is de letter zelf; omkering van een lege string is een lege string
+            return ReverseString(text.Substring(1)) + text[0];
+        }//ReverseStringOptimised
+
+        static int OptellenShort(int number)
+        {
+            if (number <= 0) return 0;
+            return number + Optellen(number - 1);
+        }// OptellenShort()
+
     }
 }
