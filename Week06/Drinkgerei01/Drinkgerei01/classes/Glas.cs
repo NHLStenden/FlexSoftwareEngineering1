@@ -9,7 +9,8 @@ namespace Drinkgerei01.classes
         private int transparantie; // 0-100% 
         private int dikteMateriaal;  // in millimeter
 
-        public Glas(bool heeftOor, string soortDrank, int capaciteit, int hoeveelheid, int maxTemperatuur, bool krasvast, int transparantie, int dikteMateriaal) : base(heeftOor, soortDrank, capaciteit, hoeveelheid)
+        public Glas(bool heeftOor, string soortDrank, int capaciteit, int hoeveelheid, int maxTemperatuur, bool krasvast, int transparantie, int dikteMateriaal) 
+            : base(heeftOor, soortDrank, capaciteit, hoeveelheid)
         {
             this.maxTemperatuur = maxTemperatuur;
             this.krasvast = krasvast;
