@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tentamenvoorbereiding01", "Tentamenvoorbereiding01\Tentamenvoorbereiding01.csproj", "{3DBA1CE8-CD55-4F63-A9CE-8B292FFE57A2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tentamenvoorbereiding01", "Tentamenvoorbereiding01\Tentamenvoorbereiding01.csproj", "{3DBA1CE8-CD55-4F63-A9CE-8B292FFE57A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecursieRecept", "RecursieRecept\RecursieRecept.csproj", "{F36FAC87-53A4-48DB-AD78-FABF36FD5AA1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecursieReceptGetallen", "RecursieReceptGetallen\RecursieReceptGetallen.csproj", "{DF75A195-7102-4C4B-BB09-6C588FEC4BA3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{3DBA1CE8-CD55-4F63-A9CE-8B292FFE57A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3DBA1CE8-CD55-4F63-A9CE-8B292FFE57A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3DBA1CE8-CD55-4F63-A9CE-8B292FFE57A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F36FAC87-53A4-48DB-AD78-FABF36FD5AA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F36FAC87-53A4-48DB-AD78-FABF36FD5AA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F36FAC87-53A4-48DB-AD78-FABF36FD5AA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F36FAC87-53A4-48DB-AD78-FABF36FD5AA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF75A195-7102-4C4B-BB09-6C588FEC4BA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF75A195-7102-4C4B-BB09-6C588FEC4BA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF75A195-7102-4C4B-BB09-6C588FEC4BA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF75A195-7102-4C4B-BB09-6C588FEC4BA3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
