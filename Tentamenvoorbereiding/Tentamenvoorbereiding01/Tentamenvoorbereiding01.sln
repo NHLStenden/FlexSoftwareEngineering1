@@ -9,7 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecursieRecept", "RecursieR
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecursieReceptGetallen", "RecursieReceptGetallen\RecursieReceptGetallen.csproj", "{DF75A195-7102-4C4B-BB09-6C588FEC4BA3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecursieArrays", "RecursieArrays\RecursieArrays.csproj", "{B8EA9FF6-3B46-415E-861E-A55B60E67102}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecursieArrays", "RecursieArrays\RecursieArrays.csproj", "{B8EA9FF6-3B46-415E-861E-A55B60E67102}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classes01", "Classes01\Classes01.csproj", "{81C75E9F-29AF-4F96-A26E-09EB018FEE31}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vervoersmiddelen", "Vervoersmiddelen\Vervoersmiddelen.csproj", "{61FC2500-F0CB-48F4-AE44-68A9F42F65DF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{B8EA9FF6-3B46-415E-861E-A55B60E67102}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B8EA9FF6-3B46-415E-861E-A55B60E67102}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B8EA9FF6-3B46-415E-861E-A55B60E67102}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81C75E9F-29AF-4F96-A26E-09EB018FEE31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81C75E9F-29AF-4F96-A26E-09EB018FEE31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81C75E9F-29AF-4F96-A26E-09EB018FEE31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81C75E9F-29AF-4F96-A26E-09EB018FEE31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61FC2500-F0CB-48F4-AE44-68A9F42F65DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61FC2500-F0CB-48F4-AE44-68A9F42F65DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61FC2500-F0CB-48F4-AE44-68A9F42F65DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61FC2500-F0CB-48F4-AE44-68A9F42F65DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
