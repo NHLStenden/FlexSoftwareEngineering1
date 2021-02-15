@@ -11,9 +11,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecursieReceptGetallen", "R
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecursieArrays", "RecursieArrays\RecursieArrays.csproj", "{B8EA9FF6-3B46-415E-861E-A55B60E67102}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classes01", "Classes01\Classes01.csproj", "{81C75E9F-29AF-4F96-A26E-09EB018FEE31}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Classes01", "Classes01\Classes01.csproj", "{81C75E9F-29AF-4F96-A26E-09EB018FEE31}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vervoersmiddelen", "Vervoersmiddelen\Vervoersmiddelen.csproj", "{61FC2500-F0CB-48F4-AE44-68A9F42F65DF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vervoersmiddelen", "Vervoersmiddelen\Vervoersmiddelen.csproj", "{61FC2500-F0CB-48F4-AE44-68A9F42F65DF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BFB1166C-5368-4975-AC78-D52C16B365B1}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
