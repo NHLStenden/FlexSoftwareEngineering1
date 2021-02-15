@@ -17,6 +17,19 @@ namespace Vervoersmiddelen
             // meer het aantal wielen beinvloeden. 
         }
 
+        public override int SnelheidPlus(int delta)
+        {
+            Console.WriteLine("Draai harder met de beentjes");
+            return base.SnelheidPlus(delta);
+        }
+
+        public override int SnelheidMin(int delta)
+        {
+            Console.WriteLine("Remmen gaat vanzelf!");
+            return base.SnelheidMin(delta);
+        }
+
+
         public void OpZadelGaanZitten()
         {
 

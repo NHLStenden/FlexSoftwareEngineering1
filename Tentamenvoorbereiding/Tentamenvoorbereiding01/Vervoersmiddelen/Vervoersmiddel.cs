@@ -6,6 +6,7 @@ namespace Vervoersmiddelen
 {
     class Vervoersmiddel
     {
+
         private string kleur;
         private string fabrikant;
         private int snelheid;
@@ -30,14 +31,16 @@ namespace Vervoersmiddelen
             Console.WriteLine("We gaan rijden");
         }
 
-        public int SnelheidPlus(int delta)
+        public virtual int SnelheidPlus(int delta)
         {
+            Console.WriteLine("Vervoersmiddel: ++");
             snelheid = snelheid + delta;
             return snelheid;
         }
 
-        public int SnelheidMin(int delta)
+        public virtual int SnelheidMin(int delta)
         {
+            Console.WriteLine("Vervoersmiddel: --");
             snelheid = snelheid - delta;
             return snelheid;
         }
