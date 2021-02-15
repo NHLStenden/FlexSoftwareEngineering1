@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TentamenFlexLinkedList", "TentamenFlexLinkedList\TentamenFlexLinkedList.csproj", "{F199836C-6BB2-465F-B364-D77466CEDED0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F199836C-6BB2-465F-B364-D77466CEDED0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F199836C-6BB2-465F-B364-D77466CEDED0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F199836C-6BB2-465F-B364-D77466CEDED0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F199836C-6BB2-465F-B364-D77466CEDED0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
