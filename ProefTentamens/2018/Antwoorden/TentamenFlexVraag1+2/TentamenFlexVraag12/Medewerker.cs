@@ -28,8 +28,10 @@ namespace TentamenFlex
             salaris = nieuwSalaris;
         }
 
-        public string VolledigeNaam() => voornaam + " " + achternaam;
-
+        public string VolledigeNaam()
+        {
+            return voornaam + " " + achternaam;
+        }
         public void setFunctie(string functie)
         {
             this.functie = functie;

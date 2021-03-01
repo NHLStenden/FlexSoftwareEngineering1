@@ -76,7 +76,7 @@ namespace TentamenFlex
 
         public void DierenVoeren()
         {
-            foreach (var dier in dieren)
+            foreach (Dier dier in dieren)
             {
                 dier.GeefEten();
             }
@@ -109,7 +109,7 @@ namespace TentamenFlex
 
         public void LuisterNaarDieren()
         {
-            foreach (var dier in dieren)
+            foreach (Dier dier in dieren)
             {
                 Console.WriteLine(dier.getSoortnaam() + ":"  + dier.Geluid());
             }

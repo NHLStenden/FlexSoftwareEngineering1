@@ -19,8 +19,9 @@ namespace TentamenFlex
             this.voer      = voer;
         }
 
-        virtual public void GeefEten()
+        public void GeefEten()
         {
+            // maak gebruik van Polymorfisme: lijst met "Dier" mag ook een subklasse zijn
             Console.WriteLine("Open hok {0}", getSoortnaam());
             Console.WriteLine("Geef eten:{0}", voer);
             Console.WriteLine("Sluit hok {0}",getSoortnaam());
