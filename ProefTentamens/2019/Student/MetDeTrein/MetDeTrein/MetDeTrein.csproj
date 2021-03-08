@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+        <RootNamespace>MyLinkedListTester</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Reference Include="MyLinkedListString">
+        <HintPath>MyLinkedListString.dll</HintPath>
+      </Reference>
+      <Reference Include="MyLinkedListString, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>MyLinkedListString.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
+</Project>
