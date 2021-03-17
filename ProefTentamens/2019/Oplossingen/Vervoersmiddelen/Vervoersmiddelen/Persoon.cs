@@ -32,6 +32,14 @@ namespace Vervoersmiddelen
             {
                 Console.Write("{0} : {1}:",i++, middel.GetNaam());
                 middel.Print();
+/*                if (middel is Gemotoriseerd)
+                {
+                    Console.WriteLine("brandstof: {0}", (middel as Gemotoriseerd).GetBrandstof());
+                }
+                if (middel is NietGemotoriseerd)
+                {
+                    Console.WriteLine("aandrijving");
+                }*/
             }
 
             Console.WriteLine("Totaal {0} vervoersmiddelen", i-1);

@@ -34,6 +34,8 @@ namespace TheMeaningOfLife
 
             return OneOr42(resultaat);
         }
+
+
         // Tweede verkorte variant die gebruik maakt van een andere rekenmethode
         static int OneOr42b(int getal)
         {
@@ -65,9 +67,15 @@ namespace TheMeaningOfLife
             return result;
         }
 
+        static int Calculate3(int getal)
+        {
+            if (getal == 0 ) { return 0; }
+            return (getal % 10) * (getal % 10) + Calculate3(getal / 10);
+        }
+
         static int Calculate(int getal)
         {
-            // converteer naar een string
+            // converteer naar een string: 123 => "123"
             string txt = getal.ToString();
 
             // tussenresultaat 
@@ -79,11 +87,11 @@ namespace TheMeaningOfLife
                 // bereken de waarde van één van de cijfers in het getal. in deze lus
                 // is C een CHAR. de integer waarde van C is dan 49 voor het cijfer 0, 50 voor cijfer 1
                 // daarom trekken we de integer waarde van char '0' er af.
-                // int val = c - '0';
+                int val = c - '0';
 
                 // of gebruik parseInt. maak dan eerst van van de CHAR weer een string door deze 
                 // achter een lege string toe voegen. 
-                int val = int.Parse("" + c);
+                // int val = int.Parse("" + c);
                 result += val * val;
             }
             return result;
