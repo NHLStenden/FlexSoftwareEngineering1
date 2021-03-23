@@ -16,42 +16,8 @@ namespace RecursiveFormula
 
         static public int CalcSteps(int number)
         {
-            // stop conditie => bepaal wat je terug moet geven op basis van de opdrachtbeschrijving.
-            if (number == 1) return 1;
-
-            // variabele voor het opslaan van het resultaat voor de huidige situatie
-            int resultaatHuidig = 0;
-
-            // variabele waarin de nieuwe waarde voor de recursie opgeslagen wordt. 
-            int nieuweWaardeVoorRecursie = 0;
-
-            // bepaal het resultaat voor de huidige situatie en welke waarde naar de recursie moet.
-            if (number % 2 == 0) // even getal aangetroffen
-            {
-                resultaatHuidig = 0;
-                nieuweWaardeVoorRecursie = number / 2;
-            }
-            else // oneven getal aangetroffen
-            {
-                resultaatHuidig = 1;
-
-                // je hoeft niet per sé hier een deling te doen. beide werkt! door wel te delen
-                // is de recursie wel eerder klaar.
-                nieuweWaardeVoorRecursie = (number + 1) / 2;
-            }
-            // roep de recursie aan met de nieuwe waarde en vang het resultaat op
-            int resultaatRecursie = CalcSteps(nieuweWaardeVoorRecursie);
-
-            // bepaal het totale resultaat van de huidige situatie PLUS die van de recursie en geef die terug.
-            return resultaatHuidig + resultaatRecursie;
+            throw new NotImplementedException();
         }// CalcSteps
-
-        static public int CalcStepsShort(int number)
-        {
-            if (number == 1) return 1;
-            if (number % 2 == 0) return 0 + CalcSteps(number / 2);
-            else return 1 + CalcSteps((number + 1) / 2);
-        }
 
         [TestCase(1, 1)]
         [TestCase(2, 1)]
@@ -155,7 +121,7 @@ namespace RecursiveFormula
         static public void TestCalculations(int input, int output)
         {
             Assert.AreEqual(output, CalcSteps(input));
-            Assert.AreEqual(output, CalcStepsShort(input));
+            Assert.AreEqual(output, CalcSteps(input));
         }
     }
 

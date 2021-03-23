@@ -8,7 +8,7 @@ namespace Muziekinstrumenten
     {
         string Naam;
         public virtual void Maakgeluid() {
-            Console.Write("{0}: ", this.Naam);
+            Console.Write("{0}: <geen geluid>", this.Naam);
         }
 
         public Muziekinstrument() { }

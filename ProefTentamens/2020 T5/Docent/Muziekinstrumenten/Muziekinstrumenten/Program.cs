@@ -22,6 +22,8 @@ namespace Muziekinstrumenten
             synth1.AddGeluid("Gitaar");
             synth1.AddGeluid("Contrabas");
 
+            Toetsinstrumenten xyz = new Toetsinstrumenten("Raar ding",21);
+
             orkest.AddInstrument(sax1);
             orkest.AddInstrument(sax2);
             orkest.AddInstrument(piano);
@@ -29,7 +31,7 @@ namespace Muziekinstrumenten
             orkest.AddInstrument(synth1);
             orkest.AddInstrument(fluit1);
             orkest.AddInstrument(fluit2);
-
+            orkest.AddInstrument(xyz);
             orkest.MaakMuziek();
 
         }

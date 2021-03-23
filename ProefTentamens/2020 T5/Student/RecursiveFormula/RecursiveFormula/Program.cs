@@ -10,11 +10,70 @@ namespace RecursiveFormula
 
         }// Main
 
-
+        /// <summary>
+        /// Berekent het aantal oneven getallen 
+        /// </summary>
+        /// <param name="number">Input is getal van 1 t/m 100 (inclusief)</param>
+        /// <returns>het aantal oneven getallen bij deling door 2</returns>
         static public int CalcSteps(int number)
         {
-            throw new NotImplementedException();
+            // stop conditie: als we bij het getal 1 zijn: stop dan en geef het resultaat 1 terug (zie opdracht)
+            if (number == 1 )
+            {
+                return 1;
+            }
+            bool isOneven = (number % 2) == 1; // modulo-operator % => wat is de rest van deling tussen number en 2. 
+
+            // wat is de huidige situatie
+            int huidigeSituatie = number;
+
+            // wat is het huidige resultaat?
+            int resultaat = 0;
+            if (isOneven)
+            {
+                resultaat = 1;
+            }
+            else
+            {
+                resultaat = 0;
+            }
+
+            // bepaal het restant
+            int restant = 0;
+
+            if (isOneven)
+            {
+                restant = (number + 1) / 2;
+            }
+            else
+            {
+                restant = number / 2;
+            }
+
+            // roep recursief aan en onthoudt het resultaat
+            int resultaatVanDeRest = CalcSteps(restant);
+
+            // wat is het eindresultaat van dit niveau?
+            int eindResultaat = resultaat + resultaatVanDeRest;
+
+            // return resultaat
+
+            return eindResultaat;
+
         }// CalcSteps
+
+        static int CalcStepsKort(int number)
+        {
+            if (number == 1) return 1;
+            if (number % 2 == 0 ) // even
+            {
+                return 0 + CalcStepsKort(number / 2);
+            }
+            else // oneven
+            {
+                return 1 + CalcStepsKort((number + 1) / 2);            
+            }
+        }
 
         [TestCase(1, 1)]
         [TestCase(2, 1)]
@@ -117,7 +176,7 @@ namespace RecursiveFormula
         [TestCase(99, 5)]
         static public void TestCalculations(int input, int output)
         {
-            Assert.AreEqual(output, CalcSteps(input));
+            Assert.AreEqual(output, CalcStepsKort(input));
         }
     }
 
