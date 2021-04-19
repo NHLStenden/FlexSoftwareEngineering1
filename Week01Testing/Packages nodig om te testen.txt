@@ -1,0 +1,5 @@
+Gebruik als Package source deze URL: https://api.nuget.org/v3/index.json
+
+Microsoft.NET.test.sdk
+NUnit 
+NUnit3TestAdapter
