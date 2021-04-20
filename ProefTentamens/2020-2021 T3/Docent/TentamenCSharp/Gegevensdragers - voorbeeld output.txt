@@ -1,0 +1,22 @@
+[USBStick] Kingston = 8GB (portable)
+[USBStick] WD = 16GB (portable)
+- ! Encrypted
+[USBStick] XYZ = 32GB (portable)
+[SDCard] Telefoon Martin = 32GB (portable)
+- Formaat: microSD
+[SDCard] Telefoon Piet = 32GB (portable)
+- Formaat: microSD
+[SDCard] Telefoon Piet = 32GB (portable)
+- Formaat: full
+[Harddisk] sda = 1TB 
+- 3,5"
+[Harddisk] sdb = 1TB 
+- 2,5"
+[SolidStateDisk] sdc = 60GB 
+- 500MB/s
+[SolidStateDisk] sdc = 60GB 
+- 500MB/s
+------------------------
+10 items gevonden
+
+
