@@ -11,9 +11,11 @@ namespace MeaningOfLife
                 Console.WriteLine("{0} = {1}", i, OneOr42(i));
                 Console.WriteLine("{0} = {1} stappen", i, OneOr42Counter(i));
             }
-            // schrijf een functie OneOr42Counter die het aantal stappen teruggeeft dat nodig is om bij 1 of 42 uit te komen. 
-            // de huidige functie OneOr42 moet dan op een klein aantal stappen worden aangepast.
-            // dus 999 => 42 in 7 stappen (of 8 als je 42 in de stopconditie ook meetelt als stap).
+
+            int n = 100000;
+            Console.WriteLine("Tussen 0 en {0} zitten {1} oneven getallen", n, OnevenGetallenTellen(n) );
+            Console.WriteLine("Tussen 0 en {0} zitten {1} oneven getallen", n, OnevenGetallenTellenShort(n) );
+
         }
 
         static int OneOr42(int getal)
@@ -33,10 +35,56 @@ namespace MeaningOfLife
             return resultaatRestant;
 
         }
+
+        // schrijf een functie OneOr42Counter die het aantal stappen teruggeeft dat nodig is om bij 1 of 42 uit te komen. 
+        // de huidige functie OneOr42 moet dan op een klein aantal stappen worden aangepast.
+        // dus 999 => 42 in 7 stappen (of 8 als je 42 in de stopconditie ook meetelt als stap).
+
         static int OneOr42Counter(int getal)
         {
-            return 1;
+            if (getal == 42 || getal == 1)
+            {
+                return 1; // is dit nu nul of één? telt 1 of 42 ook als een stap; want je hebt in wezen de eindsituatie bereikt. dus zou NUL kunnen zijn. 
+            }
+            int huidigElement = getal;
+
+            int huidigeResultaat = Calculate(huidigElement); 
+
+            int restant = huidigeResultaat;
+
+            int resultaatRestant = OneOr42Counter(restant);
+
+            return 1 + resultaatRestant;
         }
+
+        static int OnevenGetallenTellen(int getal)
+        {
+            if (getal <= 0)
+            {
+                return 0; // want 0 is een even getal, en we moeten oneven getallen tellen.
+            }
+
+            int huidigeElement = getal;
+
+            int huidigResultaat = (getal % 2) == 1 ? 1 : 0; // dus als het getal oneven is tellen we er 1 bij op; anders nul.
+
+            int restant = getal - 1;
+
+            int resultaatRestant = OnevenGetallenTellen(restant);
+
+            return huidigResultaat + resultaatRestant;
+        }// OnevenGetallenTellen
+
+        static int OnevenGetallenTellenShort(int getal)
+        {
+            if (getal <= 0)
+            {
+                return 0; // want 0 is een even getal, en we moeten oneven getallen tellen.
+            }
+            return ((getal % 2) == 1 ? 1 : 0) + OnevenGetallenTellenShort(getal - 1); // let op: haakjes nodig om voorrang af te dwingen. 
+        }// OnevenGetallenTellenShort
+
+
 
         static int Calculate(int getal)
         {
