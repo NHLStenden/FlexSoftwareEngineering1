@@ -2,6 +2,9 @@ using System;
 
 namespace Muziekinstrumenten
 {
+    /// <summary>
+    /// Dit is de dwarsfluit klasse en die doet ....
+    /// </summary>
     public class Dwarsfluit : Muziekinstrument
     {
         public Dwarsfluit(string naam) : base(naam)
@@ -11,7 +14,7 @@ namespace Muziekinstrumenten
 
         public override void MaakGeluid()
         {
-            // base.MaakGeluid();
+            base.MaakGeluid();
             Console.WriteLine("Fluit fluit");
         }
 

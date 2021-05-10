@@ -19,6 +19,8 @@ namespace StaticMethods
             //
             // mocht je wel in de knoei komen gebruik dan de class-name om de compiler te helpen ("Disambiguation"). 
             StaticWithConstructor.name = "Martin Molema";
+
+            Console.WriteLine("StaticWithConstructor::Static constructor aangeroepen");
         }
 
         static public void PrintNaam()

@@ -11,8 +11,9 @@ namespace Muziekinstrumenten
 
         public override void MaakGeluid()
         {
-            // deze niet uitvoeren: base.MaakGeluid();
+
             Console.WriteLine("Pling pling");
+            base.MaakGeluid();
         }
     }
 }

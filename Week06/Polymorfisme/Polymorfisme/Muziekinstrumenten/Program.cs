@@ -28,22 +28,29 @@ namespace Muziekinstrumenten
             {
                 muziekinstrument.MaakGeluid();
             }
-            
+
+
             foreach (Muziekinstrument muziekinstrument in collectie)
             {
                 muziekinstrument.MaakGeluid();
+
                 if (muziekinstrument is Dwarsfluit)
                 {
+                    // inline type cast
                     (muziekinstrument as Dwarsfluit).Poetsen();
-                    Dwarsfluit dwarsfluit = muziekinstrument as Dwarsfluit;
+
+                    Dwarsfluit dwarsfluit = muziekinstrument as Dwarsfluit;  // als het toch geen dwarsfluit blijkt te zijn dan wordt NULL teruggegeven met foutmelding op volgende regel
+
                     dwarsfluit.Poetsen();
-                    
+
+                    Dwarsfluit dwarsfluit2 = (Dwarsfluit) muziekinstrument;  // deze gooit een exceptie "invalid typecast" tijdens runtime. (werkt ook in Java)
+                    dwarsfluit2.Poetsen();
                 }
             }
-            
-            
-            
-            
+
+
+
+
         }
     }
 }

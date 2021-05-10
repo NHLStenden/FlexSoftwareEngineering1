@@ -8,6 +8,10 @@ namespace StaticMethods
     {
         private string naam;
 
+        /// <summary>
+        /// Normale constructor (niet static) met één parameter. Er wordt een private variabele ingesteld.
+        /// </summary>
+        /// <param name="naam">De naam van iets</param>
         public HalfStaticClass(string naam)
         {
             this.naam = naam;
