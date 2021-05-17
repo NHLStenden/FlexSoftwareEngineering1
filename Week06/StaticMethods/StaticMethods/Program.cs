@@ -16,7 +16,7 @@ namespace StaticMethods
             // "Normale manier": eerst een nieuw object maken ("instantieëren") op basis van de klasse "NormalClass"
             NormalClass n1 = new NormalClass("Martin");
             n1.PrintNaam();
-
+            
             // volgende stap: gebruik maken van een STATIC method in een andere klasse ('StaticClass');
             // verschil: we maken niet eerst een nieuw object aan (met NEW), maar gebruiken de naam van de klasse.
             int resultaat = StaticClass.AddTwoNumbers(1, 2);

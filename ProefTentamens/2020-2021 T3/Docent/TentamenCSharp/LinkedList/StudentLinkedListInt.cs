@@ -8,6 +8,14 @@ namespace MathProblems
 
         public int OnevenSom()
         {
+/*            MyLinkedListItem item = this.head;
+
+            while (item != null)
+            {
+                Console.WriteLine(item.Data);
+                item = item.Next;
+            }
+*/
             return this.OnevenSomRecursive(this.head);
         }
         public int OnevenSomRecursive(MyLinkedListItem item)
