@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Vormen.Driedimensionaal">
+    <Position X="7.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Driedimensionaal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Vormen.Ellipsvormig">
+    <Position X="3.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAIAAAAAAIAAA=</HashCode>
+      <FileName>Ellipsvormig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Vormen.Kubus">
+    <Position X="7.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAQAAAAAAAIBAA=</HashCode>
+      <FileName>Kubus.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Vormen.Tekening">
+    <Position X="8.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Tekening.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Vormen.Veelhoek">
+    <Position X="5.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAE=</HashCode>
+      <FileName>Veelhoek.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Vormen.Vierkant">
+    <Position X="5.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Vierkant.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Vormen.Vorm">
+    <Position X="5.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAABgAAAIAAA=</HashCode>
+      <FileName>Vorm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Vormen.Cirkel">
+    <Position X="3.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Cirkel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
